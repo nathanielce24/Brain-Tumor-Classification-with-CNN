@@ -5,13 +5,13 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-filepath = r"C:\Users\natha\projects\TensorFlow\Testing\meningioma\Te-me_0164.jpg"
+filepath = r"UPLOADS\Tr-gl_0140.jpg"  #Change to the path of the image you want to classify
 
 model_layer = TFSMLayer(r"Saved_Models\Neuro93", call_endpoint="serving_default")
 
 classes = ["Glioma","Meningioma","No Tumor", "Pituary"]
 
-def get_image(filepath):
+def get_image(filepath):    #Processes image for clasification
     image = cv2.imread(filepath)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (224, 224))
@@ -19,7 +19,7 @@ def get_image(filepath):
     image = np.expand_dims(image, axis=0)
     return image
 
-def predict_class(filepath):
+def predict_class(filepath):   #Runs image through model to get prediction
     image = get_image(filepath)
     output = model_layer(image)
     predictions_array = output['output_0'].numpy()[0]
