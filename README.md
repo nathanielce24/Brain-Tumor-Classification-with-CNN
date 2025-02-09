@@ -12,7 +12,7 @@ Due to the small size of the dataset, I chose not to set any images aside for va
 
 ![alt text](https://github.com/nathanielce24/Brain-Tumor-Classification-with-CNN/blob/main/UPLOADS/examplescans.png)
 
-## **Architecture and Training**
+## **Architecture**
 
 * Input and Rescaling Layer (224,224,3)
 * Convolutional Layer 1: 32 Filters, 3x3 Kernal Size, Relu Activation
@@ -28,15 +28,15 @@ Due to the small size of the dataset, I chose not to set any images aside for va
 
 Batch-Normalization and Max-Pooling is performed after every convolutional layer.
 
-Batch Size: 32
+## **Training Parameters for Neuro93.pb**
+* Batch Size: 32
 
-Epochs: 25
+* Epochs: 25
 
-Learning Rate: 0.001
+* Learning Rate: 0.001
 
-Optimizer: Adam
+* Optimizer: Adam
 
-Total Parameters: 308,676
 
 ## **Accuracy**
 
@@ -49,7 +49,7 @@ Total Parameters: 308,676
 **Glioma:** 86.3%
 
 ##
-## **Example CLassifications**  
+## **Example Classifications**  
 
 ![alt text](https://github.com/nathanielce24/Brain-Tumor-Classification-with-CNN/blob/main/ExampleClassifications/notumor1.png)
 ![alt text](https://github.com/nathanielce24/Brain-Tumor-Classification-with-CNN/blob/main/ExampleClassifications/meningioma1.png)
