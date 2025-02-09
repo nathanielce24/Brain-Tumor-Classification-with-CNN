@@ -5,11 +5,11 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-filepath = r"UPLOADS\Tr-gl_0140.jpg"  #Change to the path of the image you want to classify
+filepath = r"PATH"  #Change to the path of the image you want to classify
 
 model_layer = TFSMLayer(r"Saved_Models\Neuro93", call_endpoint="serving_default")
 
-classes = ["Glioma","Meningioma","No Tumor", "Pituary"]
+classes = ["Glioma","Meningioma","No Tumor", "Pituitary"]
 
 def get_image(filepath):    #Processes image for clasification
     image = cv2.imread(filepath)
